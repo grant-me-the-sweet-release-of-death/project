@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordinary Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Ordinary Landing Page!</h1>
+    <p>Click on any button below to go to a random Amazon site:</p>
+
+    <a class="button" href="#" onclick="redirectToAmazon()">Button 1</a>
+    <a class="button" href="#" onclick="redirectToAmazon()">Button 2</a>
+    <a class="button" href="#" onclick="redirectToAmazon()">Button 3</a>
+    <a class="button" href="#" onclick="redirectToAmazon()">Button 4</a>
+    <a class="button" href="#" onclick="redirectToAmazon()">Button 5</a>
+
+    <script>
+        // Function to redirect to a random Amazon site
+        function redirectToAmazon() {
+            // List of Amazon URLs
+            var amazonSites = [
+                'https://www.amazon.com/',
+                'https://www.amazon.co.uk/',
+                'https://www.amazon.de/',
+                'https://www.amazon.fr/',
+                'https://www.amazon.in/'
+            ];
+
+            // Get a random index
+            var randomIndex = Math.floor(Math.random() * amazonSites.length);
+
+            // Redirect to the random Amazon site
+            window.location.href = amazonSites[randomIndex];
+        }
+    </script>
+</body>
+</html>
